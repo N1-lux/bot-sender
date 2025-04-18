@@ -1,0 +1,26 @@
+{
+  "name": "bot-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirijoshi/bot-sender.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirijoshi/bot-sender/issues"
+  },
+  "homepage": "https://github.com/Kirijoshi/bot-sender#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "discord.js-selfbot-v13": "^2.0.0",
+    "dotenv": "^10.0.0"
+  }
+}
