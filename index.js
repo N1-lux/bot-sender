@@ -1,18 +1,15 @@
 const express = require('express');
 const app = express();
-require("dotenv").config(); // Only need to call once
 
+require("dotenv").config();
 const { Client } = require("discord.js-selfbot-v13");
 const client = new Client();
 
 app.get('/', (req, res) => res.send('Bot is running!'));
-
-// Ensure your app uses the correct Heroku port
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Web server running on port ${PORT}.`));
+app.listen(3000, () => console.log('Web server running on port 3000.'));
 
 const TOKEN = process.env.TOKEN;
-const CHANNEL_ID = "1268315944141324369"; // Channel ID
+const CHANNEL_ID = "1268315944141324369"; // Where to send
 const GUILD_ID = "1353309496134467634"; // Server ID
 
 // Base message (your full ad)
@@ -59,21 +56,16 @@ client.on("ready", () => {
   if (!channel) return console.error("Channel not found");
 
   const sendLoop = async () => {
-    let messageCount = 0; // Add a message count limit
-    const maxMessages = 10; // Stop after sending 10 messages
-
-    while (messageCount < maxMessages) {
+    while (true) {
       const message = insertZeroWidthSpace(baseMessage);
-      await channel.send(message).catch(console.error);
-      messageCount++;
+      channel.send(message).catch(console.error);
       const delay = getRandomInterval();
       console.log(`Sent message, waiting ${delay / 1000}s`);
       await new Promise((r) => setTimeout(r, delay));
     }
-    console.log("Finished sending messages.");
   };
 
-  sendLoop();
+  sendLoop(); // Run the infinite loop to send messages indefinitely
 });
 
 client.login(TOKEN);
