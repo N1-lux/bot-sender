@@ -5,14 +5,17 @@ require("dotenv").config();
 const { Client } = require("discord.js-selfbot-v13");
 const client = new Client();
 
+// ✅ Heroku-compatible port binding
+const PORT = process.env.PORT || 3000;
 app.get('/', (req, res) => res.send('Bot is running!'));
-app.listen(3000, () => console.log('Web server running on port 3000.'));
+app.listen(PORT, () => console.log(`Web server running on port ${PORT}.`));
 
+// 🔐 Config
 const TOKEN = process.env.TOKEN;
-const CHANNEL_ID = "1268315944141324369"; // Where to send
+const CHANNEL_ID = "1268315944141324369"; // Channel to send messages to
 const GUILD_ID = "1353309496134467634"; // Server ID
 
-// Base message (your full ad)
+// 📢 Your base ad message
 const baseMessage = `
 **Selling JB items** for PAYPAL/CRYPTO. I also accept RBX :money_with_wings: 
 Torpedo 19.5$ (0x) | Javelin 17.3 (4x) Beignet 12.8$ (5x)| Celsior 12.8$ (3x) | Proto-8 11.5$ (2x) | Arachnid 9$ (1x) | Beam Hybrid 7.6$ (3x) | Icebreaker 7.2$ (2x) | M12 5.9$ (2x) | Banana Car 5.3$ (2x) | Crew Capsule 4.3$ (0x) | Bandit 3.6 (3x) | Parisian 3.4$ (2x) | Aperture 3.2$  | Rattler 2.8$ (x3) | Scorpion 2.6$ (x5) | Carbonara 2.4$ (0x) | Goliath 1.7$ (1x) | Torero 1.5$ (2x) | Brulee 1.45$ (x12) |  Wedge $1.25 (x2) | Bloxy $1 (x1) | Storm rider $1 (x82)  |  Longhorn 0.75$ (1x) | Shell Classic 0.65$ (1x) | Megalodon 0.65 (1x)
@@ -53,18 +56,20 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.username}`);
 
   const channel = client.channels.cache.get(CHANNEL_ID);
-  if (!channel) return console.error("Channel not found");
+  if (!channel) return console.error("❌ Channel not found");
+
+  let counter = 1;
 
   const sendLoop = async () => {
-    for (let i = 0; i < 1000000; i++) {
+    while (counter <= 1000000) {
       const message = insertZeroWidthSpace(baseMessage);
       try {
         await channel.send(message);
-        console.log(`✅ Sent message #${i + 1}, waiting...`);
+        console.log(`✅ Sent message #${counter}, waiting...`);
       } catch (err) {
-        console.error(`❌ Error sending message #${i + 1}:`, err);
+        console.error(`❌ Error sending message #${counter}:`, err.message);
       }
-
+      counter++;
       const delay = getRandomInterval();
       console.log(`⏱️ Waiting ${delay / 1000}s`);
       await new Promise((r) => setTimeout(r, delay));
