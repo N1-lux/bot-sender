@@ -36,7 +36,7 @@ Using a **TRUSTED MM** or **YGF**  (35+ vouches!)
 `;
 
 function insertZeroWidthSpace(text) {
-  const positions = [10, 30, 50, 70]; // Insert invisible char at these spots (not too early)
+  const positions = [10, 30, 50, 70];
   for (let pos of positions) {
     if (text.length > pos) {
       text = text.slice(0, pos) + "\u200B" + text.slice(pos);
@@ -56,16 +56,22 @@ client.on("ready", () => {
   if (!channel) return console.error("Channel not found");
 
   const sendLoop = async () => {
-    while (true) {
+    for (let i = 0; i < 1000000; i++) {
       const message = insertZeroWidthSpace(baseMessage);
-      channel.send(message).catch(console.error);
+      try {
+        await channel.send(message);
+        console.log(`✅ Sent message #${i + 1}, waiting...`);
+      } catch (err) {
+        console.error(`❌ Error sending message #${i + 1}:`, err);
+      }
+
       const delay = getRandomInterval();
-      console.log(`Sent message, waiting ${delay / 1000}s`);
+      console.log(`⏱️ Waiting ${delay / 1000}s`);
       await new Promise((r) => setTimeout(r, delay));
     }
   };
 
-  sendLoop(); // Run the infinite loop to send messages indefinitely
+  sendLoop();
 });
 
 client.login(TOKEN);
