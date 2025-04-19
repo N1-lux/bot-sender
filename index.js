@@ -17,22 +17,22 @@ const GUILD_ID = "1353309496134467634"; // Server ID
 
 // 📢 Your base ad message
 const baseMessage = `
-**Selling JB items** for PAYPAL/CRYPTO. I also accept RBX :money_with_wings: 
-Torpedo 19.5$ (0x) | Javelin 17.3 (4x) Beignet 12.8$ (5x)| Celsior 12.8$ (3x) | Proto-8 11.5$ (2x) | Arachnid 9$ (1x) | Beam Hybrid 7.6$ (3x) | Icebreaker 7.2$ (2x) | M12 5.9$ (2x) | Banana Car 5.3$ (2x) | Crew Capsule 4.3$ (0x) | Bandit 3.6 (3x) | Parisian 3.4$ (2x) | Aperture 3.2$  | Rattler 2.8$ (x3) | Scorpion 2.6$ (x5) | Carbonara 2.4$ (0x) | Goliath 1.7$ (1x) | Torero 1.5$ (2x) | Brulee 1.45$ (x12) |  Wedge $1.25 (x2) | Bloxy $1 (x1) | Storm rider $1 (x82)  |  Longhorn 0.75$ (1x) | Shell Classic 0.65$ (1x) | Megalodon 0.65 (1x)
+**Selling JB items** for PAYPAL/CRYPTO. I also accept RBX 💸 
+Torpedo 19.5$ (2x) | Javelin 17.3 (3x) Beignet 13$ (3x)| Celsior 12.8$ (5x) | Proto-8 11.5$ (3x) | Arachnid 9$ (3x) | Beam Hybrid 7.6$ (2x) | Icebreaker 7.2$ (2x) | M12 5.9$ (1x) | Banana Car 5.3$ (2x) | Crew Capsule 4.3$ (0x) | Bandit 3.6 (2x) | Parisian 3.4$ (2x) | Aperture 3.2$ (0x) | Rattler 2.8$ (x3) | Scorpion 2.6$ (x5) | Carbonara 2.4$ (1x) | Goliath 1.7$ (0x) | Torero 1.5$ (2x) | Brulee 1.45$ (x10) |  Wedge $1.25 (x0) | Bloxy $1 (x1) | Storm rider $1 (x90)  |  Longhorn 0.75$ (1x) | Shell Classic 0.65$ (2x) | Megalodon 0.65 (2x)
 -
 **SPOILERS :wing: **:
-Checker 11$ (2x) | Thrusters 9$ (4x) | 3x Bicycle Rack 2.5$ (1x)
+Checker 11$ (3x) | Drip 6.5$ (1x) | Thrusters 9$ (4x) | 3x Bicycle Rack 2.5$ (1x)
 -
 **RIMS & TIRES :white_circle: **:
-Void rims 10$ (3x) | Brickset tire 9$ (1x) | Spinners 6$ (3x) | Snowflake 1.5$ (1x) | Hypno 3$ (3x) | Track toy 1$ (1x)
+Void rims 10$ (3x) | Brickset tire 9$ (1x) | Spinners 6$ (5x) | Snowflake 1.5$ (1x) | Hypno 3$ (3x) | Track toy 1$ (1x)
 -
 **TEXTURES & COLORS :rainbow: **:
-Hyperorange lvl 5 -  10$ | Hyperpink lvl 5 - 19$| Vantablack 8.5$ (1x) | Orange lvl 3 2.1$ (1x)
+1x Vantablack | 1x Hyperpink lvl 5 | 1x Hyperorange lvl 5 | 1x Hypergreen lvl 5 | 1x Hyperdiamond lvl 5 | 1x Hyperyellow lvl 5 | 1x Hyperblue lvl 5 | 1x Hyperred lvl 5 | 1x Hyperyellow lvl 4 | 1x Hyperpurple lvl 3
 -----------------------------------------------------
-*DM@jb_marketplace for other items not available on this list*
+*DM @jb_marketplace for other items not available on this list*
 -------------------------------------------------
 -
-Using a **TRUSTED MM** or **YGF**  (35+ vouches!)
+Using a **TRUSTED MM** or **YGF**  (45+ vouches!)
 *preferably purchases over 10$*
 -
 **Feel free to dm me with the items and the payment method!!**
